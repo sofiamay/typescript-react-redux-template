@@ -41,7 +41,7 @@ Update *src/index.css* with preferred CSS template
     });
     ```
     
-3. Update *src/*index.ts* to use store:
+3. Update *src/index.ts* to use store:
 
     ```
     import { Provider } from 'react-redux';
