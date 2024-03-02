@@ -18,12 +18,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 4. Include tailwind in *index.css*:
 
-    ```@import 'tailwindcss/base';
+    ```
+    @import 'tailwindcss/base';
     @import 'tailwindcss/components';
     @import 'tailwindcss/utilities';
     ```
 
-5. Rename *src/App.css* --> *src/App.scss* to make sure sass is compiling correctly.
+5. Rename *src/App.css* --> *src/App.scss* to make sure sass is compiling correctly.  Edit */src/App.tsx* to import the new version.
 
 6. (*Optional*): Use CSS template
 Update *src/index.css* with preferred CSS template
@@ -41,7 +42,7 @@ Update *src/index.css* with preferred CSS template
     });
     ```
     
-3. Update *src/index.ts* to use store:
+3. Update *src/index.tsx* to use store:
 
     ```
     import { Provider } from 'react-redux';
