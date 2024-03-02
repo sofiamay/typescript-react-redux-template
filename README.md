@@ -25,5 +25,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 5. Rename *src/App.css* --> *src/App.scss* to make sure sass is compiling correctly.
 
-### Initial Set Up:
-Edit *public/index.html* with custom title, description, favicon and scripts such as google fonts
+### Add directories:
+Add *components/*, *hooks/*, and *store/index.ts*
