@@ -25,5 +25,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 5. Rename *src/App.css* --> *src/App.scss* to make sure sass is compiling correctly.
 
+6. (*Optional*): Use CSS template
+Update *src/index.css* with preferred CSS template
+
 ### Add directories:
 Add *components/*, *hooks/*, and *store/index.ts*
+
