@@ -28,6 +28,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 6. (*Optional*): Use CSS template
 Update *src/index.css* with preferred CSS template
 
-### Add directories:
-Add *components/*, *hooks/*, and *store/index.ts*
+### Add directories/files:
+1. Add *src/components/*, *src/hooks/*, and *src/store/index.ts*
+
+2. Update *src/store/index.ts* with:
+
+    ```
+    import { configureStore } from "@reduxjs/toolkit";
+
+    export const store = configureStore({
+        reducer: {},
+    });
+    ```
+    
+3. Update *src/*index.ts* to use store:
+
+    ```
+    import { Provider } from 'react-redux';
+    import { store } from './store';
+    ...
+    root.render(
+        <React.StrictMode>
+            <Provider store={store}>
+            <App />
+            </Provider>
+        </React.StrictMode>
+        );
+    ```
 
