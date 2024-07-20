@@ -12,7 +12,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### CSS Configuration:
 
-1. `npm i tailwindcss postcss-cli autoprefixer -D`
+1. `npm i tailwindcss postcss-cli autoprefixer -D` and `npm install sass`
 2. `npx tailwindcss init`
 3. Add to the `content` array in *tailwind.config.js*: `"./src/**/*{js,jsx,ts,tsx}",`
 4. `touch postcss.config.js` and add: 
