@@ -12,11 +12,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### CSS Configuration:
 
-1. `npm install -D tailwindcss sass`
+1. `npm i tailwindcss postcss-cli autoprefixer -D`
 2. `npx tailwindcss init`
 3. Add to the `content` array in *tailwind.config.js*: `"./src/**/*{js,jsx,ts,tsx}",`
+4. `touch postcss.config.js` and add: 
+```
+module.exports = {
+  plugins: [require("tailwindcss"), require("autoprefixer")]
+};
+```
+5. Create a *styles/* directory. Create *styles/tailwind.scss* in this directory. Move index.css to this directory and rename it to *index.scss*. In *index.tsx*, update the reference to *./styles/index.scss*
 
-4. Include tailwind in *index.css*:
+6. Include in in *tailwind.scss*:
 
     ```
     @import 'tailwindcss/base';
@@ -24,9 +31,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     @import 'tailwindcss/utilities';
     ```
 
-5. Rename *src/App.css* --> *src/App.scss* to make sure sass is compiling correctly.  Edit */src/App.tsx* to import the new version.
+7. Update *package.json* with these scripts:
+```
+"scripts": {
+    "start": "npm run build:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/styles/tailwind.scss -o src/styles/index.scss "
+  }
+```
 
-6. (*Optional*): Use CSS template
+8. Rename *src/App.css* --> *src/App.scss* to make sure sass is compiling correctly.  Edit */src/App.tsx* to import the new version.
+
+9. (*Optional*): Use CSS template
 Update *src/index.css* with preferred CSS template
 
 ### Add directories/files:

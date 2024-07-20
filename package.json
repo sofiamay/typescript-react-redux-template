@@ -19,12 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:css": "postcss src/styles/main.css -o src/index.css",
-    "watch:css": "postcss src/styles/main.css -o src/index.css -w",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "npm run build:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:css": "postcss src/styles/tailwind.scss -o src/styles/index.scss"
   },
   "eslintConfig": {
     "extends": [
@@ -46,7 +45,6 @@
   },
   "devDependencies": {
     "install": "^0.13.0",
-    "npm": "^10.5.0",
     "sass": "^1.71.1",
     "tailwindcss": "^3.4.1"
   }
